@@ -1,6 +1,6 @@
-sudo apt update
+apt-get update
 # install zsh
-sudo apt-get install zsh
+apt-get install zsh
 chsh -s $(which zsh)
 
 # flush dotfile 
@@ -10,6 +10,6 @@ chsh -s $(which zsh)
 curl -sS https://starship.rs/install.sh | sh
 
 # install python3 to install autojump
-sudo apt-get install python3
-cd ./.dotfiles/plugins/autojump && ./install.py && cd -
+apt-get install python3
+cd ./plugins/autojump && ./install.py && cd -
 
