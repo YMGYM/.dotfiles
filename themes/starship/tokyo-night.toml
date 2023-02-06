@@ -12,10 +12,11 @@ $golang\
 $php\
 [](fg:#212736 bg:#1d2230)\
 $time\
-[ ](fg:#1d2230)\
+[](fg:#1d2230 bg:#2F8F9D)\
 $kubernetes\
-[](fg:#2F8F9D bg:#33658A)\
+[](fg:#2F8F9D bg:#33658A)\
 $cmd_duration\
+[ ](fg:#33658A)\
 \n$character"""
 
 [directory]
@@ -62,12 +63,11 @@ format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bg:#1d2230"
 format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
 
 [cmd_duration]
 min_time = 500
-format = "took [$duration](bold yellow)"
+format = '[[  took $duration ](bg:#33658A)]($style)'
 
 [kubernetes]
 style = "bg:#2F8F9D"
@@ -78,9 +78,6 @@ disabled = false
 # "(?P<user>^([\\w-]+@([\\w-]+\\.)+[\\w-]{2,4}))@(?P<cluster>([\\w-]+)).*" = "$cluster"
 "(?P<arn>^([\\w\\-:]+))/(?P<cluster>([\\w-]+))" = "$cluster"
 "project-([\\w]+)-(?P<cluster>([\\w-]+))" = "$cluster"
-# "dev.local.cluster.k8s" = "dev"
-# ".*/openshift-cluster/.*" = "openshift"
-# "gke_.*_(?P<var_cluster>[\\w-]+)" = "gke-$var_cluster"
 
 [docker_context]
 symbol = " "
