@@ -18,5 +18,4 @@ curl -sS https://starship.rs/install.sh | sh --yes
 
 # install python3 to install autojump
 apt-get install python3 -y
-python3 "~/.dotfiles/plugins/autojump/install.py"
-
+cd "~/.dotfiles/plugins/autojump" && python3 ./install.py && cd -
