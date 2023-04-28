@@ -1,6 +1,6 @@
 format = """
 [░▒▓](#a3aed2)\
-[  ](bg:#a3aed2 fg:#090c0c)\
+[ YMGYM/ubuntu: ](bg:#a3aed2 fg:#090c0c)\
 $directory\
 [](fg:#769ff0 bg:#394260)\
 $git_branch\
@@ -14,7 +14,9 @@ $php\
 $time\
 [](fg:#1d2230 bg:#2F8F9D)\
 $kubernetes\
-[](fg:#2F8F9D bg:#33658A)\
+[](fg:#2F8F9D bg:#1d2230)\
+$python\
+[](fg:#1d2230 bg:#33658A)\
 $cmd_duration\
 [ ](fg:#33658A)\
 \n$character"""
@@ -83,3 +85,6 @@ disabled = false
 symbol = " "
 style = "bg:#2F8F9D"
 format = '[[ $symbol $context ](bg:#2F8F9D)]($style) $path'
+
+[python]
+format = '[🐍 (\($virtualenv\) )(fg:#a0a9cb bg:#1d2230)]($style)'
