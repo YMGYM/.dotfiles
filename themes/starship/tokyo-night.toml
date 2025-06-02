@@ -76,10 +76,13 @@ style = "bg:#2F8F9D"
 format = '[⛵ $context \($namespace\)]($style)'
 disabled = false
 
-[kubernetes.context_aliases]
-# "(?P<user>^([\\w-]+@([\\w-]+\\.)+[\\w-]{2,4}))@(?P<cluster>([\\w-]+)).*" = "$cluster"
-"(?P<arn>^([\\w\\-:]+))/(?P<cluster>([\\w-]+))" = "$cluster"
-"project-([\\w]+)-(?P<cluster>([\\w-]+))" = "$cluster"
+[[kubernetes.contexts]]
+context_pattern = "(?P<arn>^([\\w\\-:]+))/(?P<cluster>([\\w-]+))"
+context_alias = "$cluster"
+
+[[kubernetes.contexts]]
+context_pattern = "project-([\\w]+)-(?P<cluster>([\\w-]+))"
+context_alias = "$cluster"
 
 [docker_context]
 symbol = " "
